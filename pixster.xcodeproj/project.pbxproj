@@ -11,6 +11,9 @@
 		0A04B62D1899D97C00481B80 /* SearchCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A04B62B1899D97C00481B80 /* SearchCollectionViewController.xib */; };
 		0A04B6331899E7BB00481B80 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A04B6321899E7BB00481B80 /* CustomCell.m */; };
 		0A04B6351899E7E100481B80 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A04B6341899E7E100481B80 /* CustomCell.xib */; };
+		0A38F086189F3DB3009DD7AE /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38F084189F3DB3009DD7AE /* PictureViewController.m */; };
+		0A38F087189F3DB3009DD7AE /* PictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A38F085189F3DB3009DD7AE /* PictureViewController.xib */; };
+		0A38F08A189F43B1009DD7AE /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38F089189F43B1009DD7AE /* Picture.m */; };
 		42B0DFC717A81E2800BACB2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B0DFC617A81E2800BACB2C /* Foundation.framework */; };
 		42B0DFC917A81E2800BACB2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B0DFC817A81E2800BACB2C /* CoreGraphics.framework */; };
 		42B0DFCB17A81E2800BACB2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B0DFCA17A81E2800BACB2C /* UIKit.framework */; };
@@ -53,6 +56,11 @@
 		0A04B6311899E7BB00481B80 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		0A04B6321899E7BB00481B80 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		0A04B6341899E7E100481B80 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		0A38F083189F3DB3009DD7AE /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
+		0A38F084189F3DB3009DD7AE /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
+		0A38F085189F3DB3009DD7AE /* PictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureViewController.xib; sourceTree = "<group>"; };
+		0A38F088189F43B1009DD7AE /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		0A38F089189F43B1009DD7AE /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		42B0DFC317A81E2800BACB2C /* pixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B0DFC617A81E2800BACB2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42B0DFC817A81E2800BACB2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +164,9 @@
 				0A04B6311899E7BB00481B80 /* CustomCell.h */,
 				0A04B6321899E7BB00481B80 /* CustomCell.m */,
 				0A04B6341899E7E100481B80 /* CustomCell.xib */,
+				0A38F083189F3DB3009DD7AE /* PictureViewController.h */,
+				0A38F084189F3DB3009DD7AE /* PictureViewController.m */,
+				0A38F085189F3DB3009DD7AE /* PictureViewController.xib */,
 				0A04B6291899D97C00481B80 /* SearchCollectionViewController.h */,
 				0A04B62A1899D97C00481B80 /* SearchCollectionViewController.m */,
 				0A04B62B1899D97C00481B80 /* SearchCollectionViewController.xib */,
@@ -164,6 +175,8 @@
 				42B0DFF617A81E6200BACB2C /* SearchViewController.m */,
 				42B0DFF717A81E6200BACB2C /* SearchViewController.xib */,
 				42B0E07917A82E2E00BACB2C /* AFNetworking */,
+				0A38F088189F43B1009DD7AE /* Picture.h */,
+				0A38F089189F43B1009DD7AE /* Picture.m */,
 			);
 			path = pixster;
 			sourceTree = "<group>";
@@ -304,6 +317,7 @@
 				0A04B62D1899D97C00481B80 /* SearchCollectionViewController.xib in Resources */,
 				0A04B6351899E7E100481B80 /* CustomCell.xib in Resources */,
 				42B0DFD117A81E2800BACB2C /* InfoPlist.strings in Resources */,
+				0A38F087189F3DB3009DD7AE /* PictureViewController.xib in Resources */,
 				42B0DFD917A81E2800BACB2C /* Images.xcassets in Resources */,
 				42B0DFF917A81E6200BACB2C /* SearchViewController.xib in Resources */,
 			);
@@ -324,7 +338,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A38F08A189F43B1009DD7AE /* Picture.m in Sources */,
 				42B0E09317A82E2E00BACB2C /* AFURLConnectionOperation.m in Sources */,
+				0A38F086189F3DB3009DD7AE /* PictureViewController.m in Sources */,
 				42B0E09517A82E2E00BACB2C /* UIImageView+AFNetworking.m in Sources */,
 				42B0E08F17A82E2E00BACB2C /* AFImageRequestOperation.m in Sources */,
 				42B0E08E17A82E2E00BACB2C /* AFHTTPRequestOperation.m in Sources */,

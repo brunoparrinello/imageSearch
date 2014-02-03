@@ -10,6 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "AFNetworking.h"
 #import "CustomCell.h"
+#import "PictureViewController.h"
 
 static NSString *GIMAGE_SEARCH_PREFIX = @"http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=";
 static NSString *GIMAGE_SEARCH_RESULT_SIZE_PARAMETER = @"&rsz=";
@@ -104,16 +105,23 @@ static NSString *GIMAGE_SEARCH_RESULT_OFFSET_PARAMETER = @"&start=";
             id results = [JSON valueForKeyPath:@"responseData.results"];
             NSLog(@"Next batch of results: %@", results);
             if ([results isKindOfClass:[NSArray class]]) {
-                //[self.imageResults removeAllObjects];
                 [self.imageResults addObjectsFromArray:results];
                 [self.imageSearchCollectionView reloadData];
             }
         } failure:^(NSURLRequest *operation, NSHTTPURLResponse *response, NSError *error, id JSON) {
             NSLog(@"Failure encountered during search: %d - %@",error.code, error.description);
         }];
-        
         [operation start];
     }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    PictureViewController *pvc = [[PictureViewController alloc] init];
+    pvc.picture = [[Picture alloc] init];
+    pvc.picture.pictureURL = [NSURL URLWithString:[self.imageResults[indexPath.item] valueForKeyPath:@"url"]];
+    pvc.picture.pictureTitle = [self.imageResults[indexPath.item] valueForKey:@"titleNoFormatting"];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:pvc];
+    [self.navigationController presentViewController:nvc animated:YES completion:nil];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -123,7 +131,7 @@ static NSString *GIMAGE_SEARCH_RESULT_OFFSET_PARAMETER = @"&start=";
     //Getting size of the images
     float imageWidth = [[self.imageResults[indexPath.item] valueForKeyPath:@"width"] floatValue];
     float imageHeight = [[self.imageResults[indexPath.item] valueForKeyPath:@"height"] floatValue];
-
+    
     float cellWidth = imageWidth <= 140.0 ? imageWidth+10.0 : 150.0;
     float cellHeight = imageHeight <= 140.0 ? imageHeight+10.0 : 150.0;
     
