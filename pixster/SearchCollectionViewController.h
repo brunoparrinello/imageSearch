@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchCollectionViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate>
+@interface SearchCollectionViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate, UICollectionViewDelegateFlowLayout>
 
 @end
