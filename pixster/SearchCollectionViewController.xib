@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="interactive" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4ww-b3-K9w">
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="interactive" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4ww-b3-K9w">
                     <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,7 +34,7 @@
                         <outlet property="delegate" destination="-1" id="T9N-4X-Uxw"/>
                     </connections>
                 </collectionView>
-                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search for Images here..." translatesAutoresizingMaskIntoConstraints="NO" id="Wk7-sd-Pw6">
+                <searchBar contentMode="redraw" placeholder="Search for Images here..." translatesAutoresizingMaskIntoConstraints="NO" id="Wk7-sd-Pw6">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
@@ -44,6 +44,15 @@
                 </searchBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4ww-b3-K9w" secondAttribute="bottom" id="4Uk-vM-j0F"/>
+                <constraint firstAttribute="trailing" secondItem="4ww-b3-K9w" secondAttribute="trailing" id="EWb-s0-D0L"/>
+                <constraint firstItem="4ww-b3-K9w" firstAttribute="top" secondItem="Wk7-sd-Pw6" secondAttribute="bottom" id="cut-JB-YDX"/>
+                <constraint firstAttribute="trailing" secondItem="Wk7-sd-Pw6" secondAttribute="trailing" id="dcR-K4-TlM"/>
+                <constraint firstItem="Wk7-sd-Pw6" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="n5A-RE-rCi"/>
+                <constraint firstItem="Wk7-sd-Pw6" firstAttribute="top" secondItem="1" secondAttribute="top" id="rGX-eT-XCA"/>
+                <constraint firstItem="4ww-b3-K9w" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ssu-5Y-bG4"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

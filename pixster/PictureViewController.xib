@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureViewController">
+            <connections>
+                <outlet property="pictureImageView" destination="46V-Hc-Qik" id="Er4-XC-ZJO"/>
+                <outlet property="pictureTitleLabel" destination="0VE-jw-Lt7" id="eAK-Gk-65D"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="46V-Hc-Qik">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="213" id="4mh-tr-aA9"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="0VE-jw-Lt7">
+                    <rect key="frame" x="20" y="220" width="280" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="46V-Hc-Qik" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="73e-cz-ROh"/>
+                <constraint firstAttribute="trailing" secondItem="46V-Hc-Qik" secondAttribute="trailing" id="NnQ-9t-OBP"/>
+                <constraint firstItem="0VE-jw-Lt7" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="Orj-ig-Ffa"/>
+                <constraint firstItem="46V-Hc-Qik" firstAttribute="top" secondItem="1" secondAttribute="top" id="SYc-UE-eM1"/>
+                <constraint firstItem="0VE-jw-Lt7" firstAttribute="top" secondItem="46V-Hc-Qik" secondAttribute="bottom" constant="7" id="TbT-sN-trO"/>
+                <constraint firstItem="0VE-jw-Lt7" firstAttribute="top" secondItem="46V-Hc-Qik" secondAttribute="bottom" constant="7" id="mxs-s7-W7T"/>
+                <constraint firstAttribute="trailing" secondItem="0VE-jw-Lt7" secondAttribute="trailing" constant="20" id="w6U-ne-2eK"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Edc-9k-5ih" appends="YES" id="YdZ-pq-Ajo"/>
+            </connections>
+        </view>
+        <swipeGestureRecognizer direction="right" id="Edc-9k-5ih">
+            <connections>
+                <action selector="onSwipe:" destination="-1" id="Ujh-OU-bHv"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+</document>
